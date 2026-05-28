@@ -1,18 +1,23 @@
+%define module pathable
+
 Name:		python-pathable
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/source/p/pathable/pathable-%{version}.tar.gz
 Summary:	Object-oriented paths
-URL:		https://pypi.org/project/pathable/
 License:	Apache-2.0
 Group:		Development/Python
-BuildRequires:	python%{pyver}dist(poetry-core)
+URL:		https://pypi.org/project/pathable/
+Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
 BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(poetry-core)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Object-oriented paths
 
 %files
-%{py_sitedir}/pathable
-%{py_sitedir}/pathable-*.*-info
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
