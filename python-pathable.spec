@@ -2,7 +2,7 @@
 
 Name:		python-pathable
 Version:	0.6.0
-Release:	1
+Release:	2
 Summary:	Object-oriented paths
 License:	Apache-2.0
 Group:		Development/Python
